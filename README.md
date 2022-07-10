@@ -1,3 +1,5 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mintodev/KeepExperience-PowerNukkit/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mintodev/KeepExperience-PowerNukkit/tree/main)
+
 # KeepExperience
 
 Keep experience when players die
