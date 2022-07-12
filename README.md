@@ -5,7 +5,7 @@
 Keep experience when players die
 
 # Installation
-- Download jar file from [here.]()
+- Download jar file from [here.](https://github.com/mintodev/KeepExperience-PowerNukkit/releases)
 - Put it in the `plugins` folder
 - Reload server
 
