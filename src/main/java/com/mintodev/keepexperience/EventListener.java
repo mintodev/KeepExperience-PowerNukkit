@@ -8,14 +8,16 @@ public class EventListener implements Listener {
 
     Main plugin;
 
+    public EventListener(Main main) {
+        plugin = main;
+    }
+
     void EventHandler(Main main) {
         plugin = main;
     }
 
     @EventHandler
     public void onDeath(PlayerDeathEvent e) {
-        e.setKeepExperience(true);
-
         if(plugin.isEnabled && plugin.isActive) {
             e.setKeepExperience(true);
         }

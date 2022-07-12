@@ -17,7 +17,7 @@ public class Main extends PluginBase {
     public void onEnable() {
         this.saveDefaultConfig();
 
-        this.getServer().getPluginManager().registerEvents(new EventListener(), this);
+        this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
         this.isEnabled = this.getConfig().getBoolean("enabled");
     }
 
@@ -29,16 +29,15 @@ public class Main extends PluginBase {
                 return true;
             }
 
-            if(this.isActive) {
-                if(this.isEnabled) {
-                    this.isEnabled = false;
+            if(this.isEnabled) {
+                if(this.isActive) {
+                    this.isActive = false;
                     sender.sendMessage(this.getConfig().getString("disableMessage"));
-                    return true;
                 } else {
-                    this.isEnabled = true;
+                    this.isActive = true;
                     sender.sendMessage(this.getConfig().getString("enableMessage"));
-                    return true;
                 }
+                return true;
             } else {
                 sender.sendMessage(this.getConfig().getString("keepExperienceDisabled"));
             }
